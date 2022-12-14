@@ -1,26 +1,31 @@
 import com.samu.packages.*;
+import javax.swing.JOptionPane;
 
 public class Conta {
     private long numeroConta;
     private double saldo;
     private Persoa cliente;
-
-    public Conta(long numeroConta, double saldo, Persoa cliente) {
+    
+    private double cantidad;
+    
+    public Conta(long numeroConta, double saldo, Persoa cliente){
         this.numeroConta = numeroConta;
         this.saldo = saldo;
         this.cliente = cliente;
     }
 
-    public Conta() {
+    public Conta(){
     }
     
-    public void Ingresar(double cantidad){
+    public void Ingresar(){
+        cantidad = Integer.parseInt(JOptionPane.showInputDialog("Introduzca cantidad a ingresar."));
         saldo=saldo+cantidad;
                 
     }
-    public void Retirar(double cantidad){
-       if (saldo>0)
-           saldo=saldo-cantidad;
+    public void Retirar(){
+       if (saldo>0){
+           cantidad = Integer.parseInt(JOptionPane.showInputDialog("Introduzca cantidad a retirar."));
+           saldo=saldo-cantidad;}
        else
             System.out.println("No hay saldo disponible.");
     }

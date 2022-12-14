@@ -6,7 +6,13 @@ public class Persoa {
     private String NIF;
     
     public Persoa(){
-        }
+    }
+
+    public Persoa(String nome, String apelidos, String NIF) {
+        this.nome = nome;
+        this.apelidos = apelidos;
+        this.NIF = NIF;
+    }
 
     public String getNome() {
         return nome;
