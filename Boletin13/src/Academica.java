@@ -33,9 +33,6 @@ public class Academica {
     public void setNota(){
         this.nota = scnr.nextInt();
     }
-    public void setAlum(){
-        //
-    }
     // getters      
     public static int getNumReferencia(){
         return numReferencia;
